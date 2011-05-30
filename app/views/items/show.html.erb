@@ -1,0 +1,70 @@
+
+<p>
+  <b>Title:</b>
+  <%=h @item.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @item.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @item.price %>
+</p>
+
+<p>
+  <b>Is active:</b>
+  <%= yes_or_no(@item.is_active) %>
+</p>
+
+<p>
+  <b>Show in slideshow:</b>
+  <%= yes_or_no(@item.show_in_slideshow) %>
+</p>
+
+<p>
+  <b>Is sold:</b>
+  <%= yes_or_no(@item.is_sold) %>
+</p>
+
+<p>
+  <b>Is forsale:</b>
+  <%= yes_or_no(@item.is_forsale) %>
+</p>
+<br><br>
+<%= link_to 'Edit Item', edit_item_path(@item) %> |
+<%= link_to 'Back To Item List', items_path %>
+<br><br>
+<h1>Photos For This Item</h1>
+<a href="/newphoto?item_id=<%= @item.id %>">Upload A New Photo</a>
+<br>
+<table width="100%">
+  <tr>
+    <td align="left"><b><u>Photo</b></u></td>
+    <td align="center"><b><u>Link</b></u></td>
+    <td align="center"><b><u>SlideShow?</b></u></td>
+    <td align="left"><b><u>Primary?</b></u></td>
+    <td align="left"><b><u>Caption</b></u></td>
+  </tr>
+
+<% @item_photos.each do |item_photos| %>
+  <tr>
+    <td><%= image_tag item_photos.photo.url(:thumb), :width => 75 %></td>
+	<td>
+		<%=h "<img src='http://www.lalunaranchwear.com" + item_photos.photo.url(:large) + "' width='250' border='2'/>" %>
+	</td>
+    <td valign="top" align="center"><%= yes_or_no(item_photos.is_primary) %></td>
+    <td valign="top" align="center"><%= yes_or_no(item_photos.show_in_slideshow) %></td>
+    <td valign="top"><%=h item_photos.photo_file_name %></td>
+    <td valign="top"><%=h item_photos.caption %></td>
+    <td valign="top"><a href="/editphoto?id=<%= item_photos.id %>">Edit</a></td>
+    <td valign="top"><a href="/deletephoto?id=<%= item_photos.id %>">Delete</a></td>
+  </tr>
+<% end %>
+</table>
+
+<a href="javascript:copyIntoClipboard('testing');">Testit</a>
+
+copyIntoClipboard(text)

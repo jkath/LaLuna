@@ -1,0 +1,59 @@
+body { 
+	/* background: #fff url(/images/body.png) repeat 0 0; */
+	background-color: #000000;
+  	min-height: 800px;
+	font: 12px/18px "Lucida Grande", Verdana, sans-serif;
+	color: #FF6347;
+	text-shadow: lightgray 0 1px 1px;
+}
+
+#bodycontent {
+	margin-left: auto;
+  	margin-right: auto;
+	background-color: #000000;
+	border: #FF6347 solid 2px;
+	max-width: 900px;
+	min-height: 800px;
+}
+#bodycontent a {
+	color: red;
+	text-decoration: none;
+}
+#bio {
+	width: 400px;
+	margin-left: auto;
+  	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: justify;
+	background-color: #000000;
+	/* border: #FF6347 solid 1px; */
+	font: 20px Garamond, Verdana, sans-serif;
+	font-style: italic;
+	color: #FFFFFF;
+	
+}
+#artistname {
+	margin-left: auto;
+  	margin-right: auto;
+	background-color: #000000;
+	font: 20px Garamond, Verdana, sans-serif;
+	font-style: italic;
+	color: #FFFFFF;
+	
+}
+#footer {
+   border-top: #FF6347 solid 2px;
+	margin-left: auto;
+  	margin-right: auto;
+	background-color: #000000;
+	border: #FF6347 solid 2px;
+	max-width: 900px;
+	min-height: 50px;
+} 
+.carousel_container {
+	width: 90%;
+	height: 90%;
+}

@@ -1,0 +1,22 @@
+login: &login
+  adapter: mysql
+  host: localhost
+  encoding: utf8
+
+development:
+  database: laluna_dev
+  username: root
+  password: maritza
+  <<: *login
+
+test:
+  database: laluna_test
+  username: root
+  password: maritza
+  <<: *login
+
+production:
+  database: laluna_prod
+  username: root
+  password: maritza
+  <<: *login

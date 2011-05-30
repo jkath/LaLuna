@@ -1,0 +1,23 @@
+<% form_for @item_photos, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+    <%= f.hidden_field :item_id %>
+
+  <p>
+    <%= f.check_box :is_primary %> <%= f.label :is_primary %>
+  </p>
+  <p>
+    <%= f.check_box :show_in_slideshow %> <%= f.label :show_in_slideshow %> 
+  </p>
+  <p>
+    <%= f.label :caption %><br />
+    <%= f.text_field :caption %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

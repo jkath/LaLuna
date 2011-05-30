@@ -1,0 +1,15 @@
+<% form_for(@site_content) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :text_key %><br />
+    <%= f.text_field :text_key %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :class => 'ckeditor' %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

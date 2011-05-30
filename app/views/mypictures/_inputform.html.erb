@@ -1,0 +1,21 @@
+<% form_for @mypicture, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :caption %><br />
+    <%= f.text_field :caption %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+	<% if !@mypicture.photo_file_name.blank? %>
+  <p>
+    <%= image_tag @mypicture.photo.url(:medium) %><br>
+	<%=h "<img src='http://www.lalunaranchwear.com" + @mypicture.photo.url(:large) + "' width='250' border='2'/>" %>
+  </p>
+	<% end %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

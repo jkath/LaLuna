@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	flShow Carousel 2.0 configuration file
+	Please visit http://www.flshow.net/ for more info
+-->
+
+<slide_show>
+	<photo href="http://www.flshow.net/" target="_self">/swf/images/DCP_0730.jpg</photo>
+	<photo href="http://www.flshow.net/" target="_self">/swf/images/DCP_0731.jpg</photo>
+	<photo href="http://www.flshow.net/" target="_self">/swf/images/DCP_0732.jpg</photo>
+	<photo href="http://www.flshow.net/" target="_self">/swf/images/DCP_0733.jpg</photo>
+</slide_show>

@@ -1,0 +1,16 @@
+body { 
+	/* background: #fff url(/images/body.png) repeat 0 0; */
+	background-color: #ffffff;
+  	min-height: 800px;
+	color: #000000;
+	text-shadow: lightgray 0 1px 1px;
+}
+
+#bodycontent {
+	margin-left: auto;
+  	margin-right: auto;
+	background-color: #ffffff;
+	border: #FF6347 solid 2px;
+	max-width: 900px;
+	min-height: 800px;
+}

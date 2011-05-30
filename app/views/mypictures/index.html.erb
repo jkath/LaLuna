@@ -1,0 +1,23 @@
+<h1>Pictures</h1>
+
+<table width="100%">
+  <tr>
+    <th>Photo</th>
+    <th>URL</th>
+    <th>File Name</th>
+  </tr>
+
+<% @mypictures.each do |mypicture| %>
+  <tr>
+    <td valign="top"><%= image_tag mypicture.photo.url(:medium) %></td>
+	<td valign="top"><%=h "<img src='http://www.lalunaranchwear.com" + mypicture.photo.url(:large) + "' width='250' border='2'/>" %></td>
+    <td valign="top"><%=h mypicture.photo_file_name %></td>
+    <td valign="top"><%= link_to 'Edit', edit_mypicture_path(mypicture) %></td>
+    <td valign="top"><%= link_to 'Destroy', mypicture, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Picture', new_mypicture_path %>

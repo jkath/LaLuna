@@ -1,0 +1,23 @@
+<p>
+  <b>Caption:</b>
+  <%=h @mypicture.caption %>
+</p>
+
+<p>
+  <b>Photo file name:</b>
+  <%=h @mypicture.photo_file_name %>
+</p>
+
+<p>
+  <b>Photo content type:</b>
+  <%=h @mypicture.photo_content_type %>
+</p>
+
+<p>
+  <b>Photo file size:</b>
+  <%=h @mypicture.photo_file_size %>
+</p>
+
+
+<%= link_to 'Edit', edit_mypicture_path(@mypicture) %> |
+<%= link_to 'Back', mypictures_path %>

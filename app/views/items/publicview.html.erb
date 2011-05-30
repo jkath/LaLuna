@@ -1,0 +1,47 @@
+<br>
+<center>
+<h1><%=h @item.title %></h1>
+<br>
+<br>
+	<% primary_photo = ItemPhoto.primary_photo(@item.id) %>
+	<img src="<%= primary_photo.photo.url(:large) %>" width="200"/>
+<br><br>
+Click A Thumbnail For A Larger View<br>
+<% @item_photos.each do |item_photos| %>
+	<a href="<%= item_photos.photo.url(:large) %>" rel="lightbox"><img src="<%= item_photos.photo.url(:large) %>" width="72" height="72" alt="" /></a> 
+
+<% end %>
+
+<table>
+	<tr>
+		<td width="500">
+		  <%=h @item.description %>
+		</td>
+	</tr>
+
+
+		<% if @item.is_forsale %>
+			<tr>
+				<td>
+					<br><br>
+				  	<b>Price:</b>
+				  	<%=h @item.price %>
+				</td>
+			</tr>
+		<% end %>
+
+		<% if @item.is_sold %>
+			<tr>
+				<td>
+				  <h3>This Has Been Sold
+				</td>
+			</tr>
+		<% end %>
+</table>
+<br><br>
+If you are interested in purchasing any of the items<br> you see on this site, please contact me at <br>maritza@lalunaranchwear.com<br>  Thank You!!
+<br><br>
+<img src="/images/m2.jpg" width="200"/>
+
+</center>
+

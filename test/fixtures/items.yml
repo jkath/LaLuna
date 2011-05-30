@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  price: MyString
+  is_active: false
+  show_in_slideshow: false
+  is_sold: false
+  is_forsale: false
+
+two:
+  title: MyString
+  description: MyText
+  price: MyString
+  is_active: false
+  show_in_slideshow: false
+  is_sold: false
+  is_forsale: false

@@ -1,0 +1,13 @@
+<p>
+  <b>Text key:</b>
+  <%=h @site_content.text_key %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @site_content.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_content_path(@site_content) %> |
+<%= link_to 'Back', site_contents_path %>

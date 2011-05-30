@@ -1,0 +1,33 @@
+<p>
+  <b>Item:</b>
+  <%=h @item_photos.item_id %>
+</p>
+
+<p>
+  <b>Is primary:</b>
+  <%=h @item_photos.is_primary %>
+</p>
+
+<p>
+  <b>Photo file name:</b>
+  <%=h @item_photos.photo_file_name %>
+</p>
+
+<p>
+  <b>Photo file content:</b>
+  <%=h @item_photos.photo_file_content %>
+</p>
+
+<p>
+  <b>Photo file size:</b>
+  <%=h @item_photos.photo_file_size %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%=h @item_photos.caption %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_photos_path(@item_photos) %> |
+<%= link_to 'Back', item_photos_path %>

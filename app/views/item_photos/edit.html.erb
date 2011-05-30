@@ -1,0 +1,6 @@
+<h1>Edit Photos</h1>
+
+<%= render(:partial => "inputform") %>
+
+<%= link_to 'Show', @item_photos %> |
+<%= link_to 'Back To Item', "/items/" + @item_photos.item_id.to_s %>

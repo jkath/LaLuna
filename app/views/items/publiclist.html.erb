@@ -1,0 +1,24 @@
+<h1>My Collection</h1>
+
+<center>
+<table width="97%" cellpadding="5">
+
+<%= will_paginate @items %>
+<% @items.each do |item| %>
+	<% 
+		photo_src = "/images/oops.jpg"
+		if item.item_photos.first != nil
+			photo_src = item.item_photos.first.photo.url(:thumb)
+		end
+	%>
+  <tr>
+	<td valign="top"><img src="<%= photo_src %>" width=75 %></td>
+    <td valign="top"><%=h item.title %></td>
+    <td width="50%" valign="top" style="text-align:justify;"><%=h truncate_words(item.description, 30, "... (Click View Item For More Information.)") %></td>
+    <td valign="top" align="right"><%=h item.price %></td>
+    <td valign="top"><a href="/publicview?id=<%= item.id %>">View&nbsp;Item</td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @items %>
+</center>
