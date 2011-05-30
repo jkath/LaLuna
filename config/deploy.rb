@@ -21,9 +21,9 @@ end
 task :production do
   set :deploy_to,  "/var/www/html/rails/#{application}"
   set :password, 'd3pl0y'
-  role :app, "190.120.226.226"
-  role :web, "190.120.226.226"
-  role :db,  "190.120.226.226", :primary => true
+  role :app, "74.208.205.135"
+  role :web, "74.208.205.135"
+  role :db,  "74.208.205.135", :primary => true
 end
 
 # external requirements:
